@@ -1,0 +1,194 @@
+/* Reset and Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: #fefefe;
+}
+
+/* Header */
+header {
+  background: #0a3d62;
+  padding: 1rem 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  color: white;
+  font-weight: 500;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #1e5f74;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content li {
+  padding: 0.75rem 1rem;
+}
+.dropdown-content li a {
+  color: white;
+}
+
+/* Hero */
+.hero {
+  background: url('assets/hero.jpg') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.hero-text {
+  background: rgba(0,0,0,0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.hero h1 {
+  font-size: 3rem;
+  animation: fadeInDown 1s ease-out;
+}
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+.cta-btn {
+  background: #38ada9;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+.cta-btn:hover {
+  background: #079992;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f4f4f4;
+}
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact-form {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #e0f7fa;
+}
+.contact-form form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.contact-form button {
+  background: #0a3d62;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background: #145374;
+}
+
+/* Footer */
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #82ccdd;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {opacity: 0; transform: translateY(-20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeInDown 1s forwards;
+}
+.delay1 {
+  animation-delay: 0.5s;
+}
+.delay2 {
+  animation-delay: 1s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .feature-cards {
+    flex-direction: column;
+  }
+}
